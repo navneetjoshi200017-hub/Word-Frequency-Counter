@@ -1,4 +1,4 @@
-from text_utils import get_stop_words
+import text_utils as t
 from word_counter import count_words
 from report import display_report
 
@@ -8,9 +8,14 @@ def main():
     file_path = input("Enter file path: ")        
     print("===Text Frequency Counter===")
 
-    stop_word = input("Enter one word to ignore\n(Press Enter to skip): ")
+    stop_flag = input("Want to ignore some common occuring words(y/n): ")
 
-    stop_words = get_stop_words(stop_word)
+    if t.clean_word(stop_flag) == "y":
+        stop_words = t.get_stop_words()
+    else:
+        stop_words = {}
+
+    
 
     try:
 
