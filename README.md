@@ -6,8 +6,8 @@ A command-line Python program that reads a text file, counts how often each word
 
 - Reads any plain-text file from a path you provide
 - Cleans words by lowercasing them and stripping surrounding punctuation
-- Ignores a built-in list of common stop words (e.g. *the*, *and*, *is*, *they*)
-- Lets you add one custom word to ignore
+- Gives you option to ignore a built-in list of common stop words (e.g. *the*, *and*, *is*, *they*)
+- Lets you add custom word(s) to ignore
 - Shows the top *N* most frequent words, with rank, count and percentage
 - Handles errors gracefully (missing file, invalid or non-positive numbers, empty results)
 
