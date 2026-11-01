@@ -2,9 +2,16 @@ PUNCTUATIONS = ",/.<>?:;\"\\'|!@#$%^&*()[]{}_"
 
 
 def clean_word(word):
+    """Cleans the word of any extra whitespaces 
+       and unwanted punctuations and turns everything into lower case.
+    """
     return word.strip().strip(PUNCTUATIONS).lower()
 
 def get_stop_words():
+    """Creates a set of words that are to be ignored if user agrees
+       and asks the user for custom words to ignore
+       then returns the set
+    """
     stop_words = {
     "the", "a", "an", "and", "or", "but",
     "in", "on", "at", "to", "for",

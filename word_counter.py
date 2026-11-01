@@ -1,6 +1,9 @@
 from text_utils import clean_word
 
 def count_words(file_path, stop_words):
+    """Takes the file path and returns the total unique words
+       and the total words from the text file
+    """
     unique_words = dict()
     total_words = 0
 

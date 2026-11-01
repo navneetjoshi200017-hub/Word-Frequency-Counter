@@ -1,9 +1,14 @@
 
 def get_frequency(item):
+    """Returns the frequency of each dictionary stored at item[0]."""
     return item[1]
 
 
 def get_top_words(unique_words, limit):
+    """Converts the dictionary into list of items for sorting,
+       then sorts the list in non-increasing order
+       and returns the top N most frequent words.
+    """
     word_list = list(unique_words.items())
     sorted_words = sorted(
         word_list,
@@ -15,6 +20,7 @@ def get_top_words(unique_words, limit):
     return top_words
 
 def display_report(unique_words, total_words, limit = 5):
+    """Displays the report of whole code in terminal."""
     counted_words = sum(unique_words.values())
 
     print("\n"+ "="*51)

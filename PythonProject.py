@@ -1,17 +1,18 @@
-import text_utils as t
+import text_utils as tu
 from word_counter import count_words
 from report import display_report
 
 
 def main():
+    """Main driver function that runs the whole program"""
     # file_path = "Test.txt"
     file_path = input("Enter file path: ")        
     print("===Text Frequency Counter===")
 
     stop_flag = input("Want to ignore some common occuring words(y/n): ")
 
-    if t.clean_word(stop_flag) == "y":
-        stop_words = t.get_stop_words()
+    if tu.clean_word(stop_flag) == "y":
+        stop_words = tu.get_stop_words()
     else:
         stop_words = {}
 
